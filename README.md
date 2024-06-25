@@ -1,0 +1,1 @@
+git@github.com:maismel/posmotri_v_okno.git

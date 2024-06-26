@@ -52,7 +52,7 @@ ol {
 
 .content {
   width: 1140px;
-  min-height: 534px;
+  height: 534px;
   margin: 133px auto;
   display: flex;
   align-items: flex-end;
@@ -77,15 +77,19 @@ ol {
   height: 100%;
 }
 
-/*****       SEARCH-FORM           *****/
+/*****       SECTION / result          *****/
 
-/*****       SEARCH-FORM / city           *****/
+/*****           SEARCH-FORM           *****/
+
+/*****       SEARCH-FORM / city        *****/
 
 .search-form {
+  min-height: 54px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 16px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .search-form:last-child {
@@ -152,7 +156,6 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
 }
 
 .search-form__pseudo-checkbox {
@@ -164,7 +167,16 @@ ol {
 }
 
 .search-form__pseudo-checkbox:active::before {
-  content: '';
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.search-form__checkbox[type='checkbox']:checked + span::before{
+  content: "";
   width: 15px;
   height: 15px;
   background: #fff;
@@ -182,7 +194,7 @@ ol {
 }
 
 .search-form__label-text {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
@@ -191,12 +203,13 @@ ol {
 /*****       SEARCH-FORM / button_search       *****/
 
 .button {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
+  margin-top: 10px;
 }
 
 .button:active {
@@ -226,12 +239,14 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 534px;
 }
 
 /*****             TITLE             ******/
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-weight: 700;
   color: #fff;
@@ -255,7 +270,6 @@ ol {
 .content__list-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-bottom: 30px;
 }
 
@@ -282,10 +296,15 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-left: 2px;
 }
 
 .content__video-card:active {
   background: rgba(84, 80, 80, 1);
+}
+
+.content__card-link:has(:active) .content__video-card-description-container{
+  text-decoration: none;
 }
 
 .content__video-card-description-container:hover {
@@ -325,7 +344,7 @@ ol {
 }
 
 .more-button {
-  width: 98%;
+  width: 99%;
   height: 34px;
   margin-left: 4px;
   margin-bottom: 2px;
